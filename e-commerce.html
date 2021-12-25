@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./e-commerce.css">
+</head>
+<body>
+      <nav>
+          <div class="left">
+            <img src="../ecommerce-product-page-main/images/icon-menu.svg" alt=""> 
+            <H1>SNEAKRS</H1>
+          </div>
+          <div class="right">
+            <img src="../ecommerce-product-page-main/images/icon-cart.svg" alt="">
+            <img src="../ecommerce-product-page-main/images/image-avatar.png" alt="" >
+          </div>
+     </nav>
+    
+        <div class="slides"> 
+          <div class="slide_div">
+            <img  src="../ecommerce-product-page-main/images/image-product-1.jpg" alt="">
+          </div>
+          <div class="slide_div">
+             <img  src="../ecommerce-product-page-main/images/image-product-2.jpg" alt="" >
+          </div>
+          <div class="slide_div">
+            <img  src="../ecommerce-product-page-main/images/image-product-3.jpg" alt="" >
+          </div>
+          <div class="slide_div">
+            <img  src="../ecommerce-product-page-main/images/image-product-4.jpg" alt="" >
+          </div>
+          <div class="slide_btn">
+          <button class="display-left" onclick="plusDivs(-1)"><img src="../ecommerce-product-page-main/images/icon-previous.svg" alt=""></button>
+          <button class="display-right" onclick="plusDivs(+1)"><img src="../ecommerce-product-page-main/images/icon-next.svg" alt=""></button>
+        </div>
+        </div>
+        <div class="text">
+            <div class="Compname">
+                SNEAKER COMPANY
+            </div>
+            <h1 class="edition">
+                Fall Limited Eition <br> Sneakers
+            </h1>
+            <div class="desc">
+                These low-profile sneakers are your perfect casual wear companion.Featuring a durable <br>.... everything is cool.
+            </div>
+        </div>
+        <div class="prices">
+            <h1 class="price">
+                $125.00
+            </h1>
+            <div class="promotion">
+                50%
+            </div>
+            <div class="old_price">
+             $250.50
+            </div>
+        </div>
+        <div class="qte">
+            <button class="pm">-</button> 0 <button class="pm">+</button>
+        </div>
+        <div class="add">
+            <img src="../ecommerce-product-page-main/images/icon-cart.svg" alt="">
+            Add to cart
+        </div>
+    
+      
+    </div>
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+         showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slide_div");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex-1].style.display = "block";
+}
+    </script> 
+</body>
+</html>
